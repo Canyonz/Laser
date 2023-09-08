@@ -1,0 +1,21 @@
+@import "./../../../assets/styles/vars"
+@import "./../../../assets/styles/mixin"
+
+.imgWrapper
+  position: relative
+  margin-bottom: 20px
+  &::after
+    content: "Используем современное оборудование из Европы и США"
+    position: absolute
+    bottom: 33%
+    right: 30%
+    transform: translate(50%,50%)
+    max-width: 800px
+    font-size: 48px
+    font-weight: 500
+    line-height: 56px
+
+  img
+    // display: block
+    width: 100%
+    object-fit: cover

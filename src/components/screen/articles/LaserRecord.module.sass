@@ -1,0 +1,53 @@
+@import "./../../../assets/styles/vars"
+@import "./../../../assets/styles/mixin"
+
+.recordLabel
+  max-width: 1000px
+
+.recordFormWrapper
+  max-width: 640px
+  padding: 40px 60px
+  background-color: $bgAccent
+  box-shadow: 0 5px 10px 0 #4386b557
+  border: 1px solid $border
+  border-radius: 28px
+  text-align: center
+
+  .recordFormLabel
+    margin-bottom: 12px
+    color: $accentTXT
+
+  .recordFormUnderLabel
+    margin: 0 15px
+    color: $greyTXT
+
+  .recordForm
+    .inputWrapper
+      @include flexLayout(space-between, 8px)
+      margin-top: 20px
+      padding: 15px 25px
+      background-color: $bg
+      border: 2px solid $border
+      border-radius: 24px
+      list-style-type: none
+
+      input
+        width: 100%
+        border: none
+        &::placeholder
+          color: $clueTXT
+
+    .recordFormAgreement
+      @include flexLayout(flex-start, 0)
+      margin-top: 20px
+      cursor: pointer
+      user-select: none
+
+      .policy
+        @include flexLayout(flex-start, 8px)
+
+      .policyLink
+        color: $linkTXT
+        &:hover
+          color: $accent2TXT
+

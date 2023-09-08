@@ -1,0 +1,17 @@
+@import "./../../../assets/styles/vars"
+@import "./../../../assets/styles/mixin"
+
+.whatLaser
+  @include flexLayout(space-between, 50px)
+
+  .explanation
+    max-width: 800px
+    p
+      &:last-child
+        margin-top: 1em
+
+  .imgWrapper
+    min-width: 450px
+    img
+      width: 100%
+      object-fit: cover

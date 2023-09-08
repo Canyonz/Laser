@@ -1,0 +1,112 @@
+@import "./../../../assets/styles/vars"
+@import "./../../../assets/styles/mixin"
+
+$lg: linear-gradient(90deg, #A3BDED 0%, #6991C7 100%)
+
+.btn
+  display: inline-block
+  width: autoSize(240,240px,370,1000,1000px,1920)
+  padding: autoSize(15,15px,20,1000,1000px,1920)
+  // padding: 20px 20px
+  color: $btnTXT
+  border-radius: 20px
+  font-size: autoSize(16,16px,24,1000,1000px,1920)
+  // font-size: 24px
+  text-align: center
+  text-decoration: none
+  font-weight: 500
+  white-space: nowrap
+  user-select: none
+  cursor: pointer
+
+.btnNotDisabled, .btnSecondary
+  position: relative
+  background: linear-gradient(90deg, #4481EB 0%, #04BEFE 100%)
+  z-index: 1
+  &::before
+    position: absolute
+    content: ""
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: linear-gradient(90deg, #A3BDED 0%, #6991C7 100%)
+    transition: opacity 0.2s linear
+    opacity: 0
+    z-index: -1
+  &:hover
+    &::before
+      opacity: 1
+  &:active
+    &::before
+      background: linear-gradient(90deg, #09203F 0%, #537895 100%)
+
+.btnNotDisabled
+  &::before
+    border-radius: 20px
+
+.btnSecondary
+  $secPadding: 2px
+  $secBR: 20px
+  padding: $secPadding
+  border-radius: $secBR
+  &::before
+    border-radius: $secBR
+
+  .btnSecondaryWrapper,.btnSecondaryWithSpanWrapper
+    background: $bg
+    border-radius: calc($secBR - $secPadding)
+    transition: background 0.2s linear
+    padding: 20px
+    &:hover
+      background: #F6F8FE
+
+    p
+      color: $accent2TXT
+
+  .btnSecondaryWithSpanWrapper
+    @include flexLayout(space-between,  10px)
+
+    span
+      color: $greyTXT
+      transition: color 0.2s linear
+
+    .isHover
+      color: $accent2TXT
+
+.btnDisabled
+  background: linear-gradient(90deg, #BDBBBE 0%, #9D9EA3 100%)
+  cursor: default
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+// @media only screen and (max-width : 1200px)
+
+// /* Medium Devices, Desktops */
+// @media only screen and (max-width : 992px)
+//   .btn
+//     min-width: 200px
+//     max-width: 240px
+//     width: 100%
+//     font-size: 16px
+
+// /* Small Devices, Tablets */
+// @media only screen and (max-width : 768px)
+//   .btn
+//     min-width: auto
+//     max-width: 200px
+
+// /* Extra Small Devices, Phones */
+// @media only screen and (max-width : 480px)
+//   .btn
+//     display: block
+//     font-size: 12px
+//     line-height: 14px
+//     border-radius: 8px
+//     padding: 10px 0
+
+// /* Custom, iPhone Retina */
+// @media only screen and (max-width : 320px)
+//   .btn
+//     max-width: 170px

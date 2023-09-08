@@ -1,0 +1,35 @@
+@import "./../../../assets/styles/vars"
+@import "./../../../assets/styles/mixin"
+
+.doctorsLabel
+  margin-left: calc(25px + (165 - 25) * ((100vw - 1000px) / (1920 - 1000)))
+
+.doctorCard
+  max-width: 350px
+  margin: 0 auto
+  transition: transform 0.5s ease
+  user-select: none
+
+  .imgWrapper
+    min-width: 290px
+    margin-bottom: 20px
+
+    img
+      width: 100%
+      border-radius: 24px
+      object-fit: cover
+      transition: box-shadow 0.5s ease
+
+  &:hover
+    transform: translateY(40px)
+    img
+      box-shadow: 0 -10px 30px 15px #245F872D
+
+  .doctorProf
+    color: $accentTXT
+
+  .doctorProf,.doctorName,.doctorExperience
+    display: block
+    margin: 0 auto
+    font-weight: 400
+    line-height: 32px

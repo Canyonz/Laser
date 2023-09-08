@@ -1,0 +1,30 @@
+@import "./../../../assets/styles/vars"
+@import "./../../../assets/styles/mixin"
+
+.service
+  max-width: 1100px
+  margin-left: 40px
+  box-sizing: content-box
+  cursor: pointer
+  &:not(:first-child)
+    margin-top: 20px
+
+  &::marker
+    content: url(/icon/list.svg)
+
+  &:hover
+    .serviceWrapper
+      h3
+        color: $accent2TXT
+      .serviceLine
+        border-color: $border
+
+  .serviceWrapper
+    @include flexLayout(flex-start, 20px)
+    margin-left: 20px
+
+    .serviceLine
+      align-self: flex-end
+      width: 100%
+      border-bottom: 2px solid $clueTXT
+      margin-bottom: 5px

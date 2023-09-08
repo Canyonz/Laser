@@ -1,0 +1,126 @@
+@import "./../../../assets/styles/vars"
+@import "./../../../assets/styles/mixin"
+
+.sectionWrapper
+  @include flexLayout(space-between,0)
+  flex-direction: column
+  background-position: center center
+  background-size: cover
+  animation: eye 5s 1s linear both
+  height: calc(100% - 110px)
+
+  .section_nav
+    width: 100%
+    text-align: center
+    padding: 38px 0
+    background-color: $bgColorTransparent
+    backdrop-filter: blur(10px)
+    a
+      display: inline-block
+      text-decoration: none
+      transition: color 0.2s ease
+      color: $btnTXT
+      cursor: pointer
+      &:not(:first-child)
+        margin-left: 70px
+      &:hover
+        color: $hoverTXT
+
+  .section_Text
+    width: 100%
+    padding: 24px 0
+    font-size: 36px
+    line-height: 42px
+    text-align: center
+    color: $btnTXT
+
+  .section_Text.section_footerTXT
+    backdrop-filter: blur(10px)
+    background-color: $bgColorTransparent
+    font-size: 48px
+    line-height: 56px
+
+  .section_Mobile
+    display: none
+
+@keyframes eye
+  0%
+    background-image: url("/img/eyes/eye0.jpg")
+
+  25%
+    background-image: url("/img/eyes/eye1.jpg")
+
+  75%
+    background-image: url("/img/eyes/eye2.jpg")
+
+  100%
+    background-image: url("/img/eyes/eye3.jpg")
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+// @media only screen and (max-width : 1200px)
+  /**/
+
+/* Medium Devices, Desktops */
+// @media only screen and (max-width : 992px)
+//   .sectionWrapper
+//     height: calc(100% - 86px)
+//     .section_nav
+//       padding: 18px 0
+//       a
+//         font-size: 20px
+//         &:not(:first-child)
+//           margin-left: 20px
+
+//     .section_footerTXT
+//       font-size: 40px
+//       line-height: 46px
+//       padding: 10px 0
+
+// /* Small Devices, Tablets */
+// @media only screen and (max-width : 768px)
+//   .sectionWrapper
+//     height: calc(100% - 77px)
+//     .section_nav
+//       padding: 16px 0
+//       a
+//         font-size: 16px
+//         line-height: 18px
+
+//     .section_footerTXT
+//       font-size: 34px
+//       line-height: 40px
+
+// /* Extra Small Devices, Phones */
+// @media only screen and (max-width : 480px)
+//   .sectionWrapper
+//     position: relative
+//     height: calc(100% - 56px)
+//     .section_nav
+//       padding: 16px 0
+//       a
+//         &:not(:first-child)
+//           margin-left: 10px
+
+//     .section_Text.section_footerTXT
+//       display: none
+
+//     .section_Mobile
+//       display: block
+//       position: absolute
+//       top: calc(50% - 56px)
+//       transform: translateY(-50%)
+//       .section_Text
+//         font-size: 36px
+
+// /* Custom, iPhone Retina */
+// @media only screen and (max-width : 320px)
+//   .sectionWrapper
+//     display: block
+//     height: calc(100% - 34px)
+
+//     .section_Mobile
+//       .section_Text
+//         font-size: 30px
+//         line-height: 35px

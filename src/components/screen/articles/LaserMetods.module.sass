@@ -1,0 +1,51 @@
+@import "./../../../assets/styles/vars"
+@import "./../../../assets/styles/mixin"
+
+.metodsLaser
+  @include flexLayout(space-between, 70px)
+
+  .metod
+    max-width: 800px
+
+    .metodLabel
+      @include flexLayout(space-between, 20px)
+
+      .metodCompare
+        align-self: flex-end
+        color: $linkTXT
+        &:hover
+          color: $accent2TXT
+        
+
+    .explanation
+      max-width: 570px
+      margin-top: 20px
+
+    .Corrects
+      @include flexLayout(start, 40px)
+      margin: 40px 0
+
+      p
+        color: $accentTXT
+
+  .imgWrapper
+    min-width: 400px
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      top: 24px
+      left: 24px
+      width: 100%
+      height: 98%
+      border: 1px solid $borderDisabled
+      border-radius: 220px 0
+      z-index: -1
+
+    img
+      width: 100%
+      object-fit: cover
+      border-radius: 220px 0
+
+.corrects
+  @include flexLayout(start, 70px)

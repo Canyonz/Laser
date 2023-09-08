@@ -1,0 +1,48 @@
+@import "./../../../assets/styles/vars"
+@import "./../../../assets/styles/mixin"
+
+.reviewsLabel,.buttonAll
+  margin-left: calc(25px + (165 - 25) * ((100vw - 1000px) / (1920 - 1000)))
+
+.reviewWrapper
+  display: grid
+  grid-template-columns: repeat(3,1fr)
+  gap: 40px
+  margin: 0 10px 50px
+
+  .review
+    background-color: $bgAccent
+    border-radius: 24px
+    padding: 40px
+    cursor: pointer
+    transition: 0.5s ease
+    transition-property: background-color, box-shadow
+    &:hover
+      background-color: $btnTXT
+      box-shadow: 0px 0px 20px 10px #0F647F0E
+
+    .reviewName
+      @include flexLayout(space-between, 12px)
+
+      h2
+        color: $accentTXT
+
+      img
+        max-width: 57px
+        width: 100%
+        border-radius: 50%
+        object-fit: cover
+
+    .reviewText
+      margin: 10px 0
+      overflow: hidden
+      text-overflow: ellipsis
+      display: -webkit-box
+      -webkit-line-clamp: 12
+      -webkit-box-orient: vertical
+
+    .reviewMore
+      display: block
+      max-width: 110px
+      margin-left: auto
+      color: $linkTXT

@@ -1,0 +1,69 @@
+@import "./../../../assets/styles/vars"
+@import "./../../../assets/styles/mixin"
+
+.answersLaser
+  @include flexLayout(space-between, 20px)
+  align-items: flex-start
+
+._questionHoverAndClick
+  h3
+    color: $accentTXT
+  .arrow
+    fill: $hoverTXT
+
+.question
+  max-width: 800px
+  &:not(:first-child)
+    margin-top: 20px
+
+  .questionLabel
+    @include flexLayout(space-between, 20px)
+    padding: 20px 25px
+    border: 1px solid $borderDisabled
+    border-radius: 20px
+    user-select: none
+    cursor: pointer
+    &:hover
+      @extend ._questionHoverAndClick
+    .arrow
+      fill: $borderDisabled
+      max-width: 37px
+      width: 100%
+
+  .questionLabel.questionSelect
+    @extend ._questionHoverAndClick
+    border: none
+    padding: 21px 26px
+    .arrow
+      transform: rotateZ(180deg)
+
+  .answer
+    padding: 0 30px
+    transition: max-height 0.5s
+    overflow: hidden
+    .answerText
+      &:not(:first-child)
+        margin-top: 1rem
+
+    .answerLink
+      display: block
+      margin-top: 20px
+      color: $linkTXT
+      &:hover
+        color: $accent2TXT
+
+  .answerShow
+    max-height: 250px
+
+  .answerHidden
+    max-height: 0
+
+.imgWrapper
+  min-width: 345px
+  overflow: hidden
+  img
+    display: block
+    width: 100%
+    max-height: 636px
+    transform: scale(1.5)
+    object-fit: cover

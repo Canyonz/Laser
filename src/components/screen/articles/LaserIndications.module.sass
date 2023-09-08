@@ -1,0 +1,40 @@
+@import "./../../../assets/styles/vars"
+@import "./../../../assets/styles/mixin"
+
+.indicationsLaser
+  @include flexLayout(space-between, 50px)
+
+  .indicationsInfo
+    max-width: 800px
+
+    .disease
+      &:not(:first-child)
+        margin-top: 40px
+      h3
+        $sizeCircle: 14px
+        position: relative
+        margin-bottom: 12px
+        padding-left: calc( $sizeCircle + 4px )
+        color: $accentTXT
+        &::before
+          content: ""
+          position: absolute
+          top: 50%
+          left: 0
+          transform: translateY(-50%)
+          width: $sizeCircle
+          height: $sizeCircle
+          background-color: $bgCircleDisease
+          border-radius: 50%
+
+    .more
+      @include flexLayout(space-between, 40px)
+      margin-top: 40px
+
+.imgWrapper
+  min-width: 370px
+  overflow: hidden
+  img
+    width: 100%
+    transform: scale(1.5)
+    object-fit: cover

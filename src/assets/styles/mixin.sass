@@ -1,0 +1,14 @@
+.layout
+  display: flex
+  align-items: center
+
+@mixin flexLayout($js, $gap)
+  @extend .layout
+  justify-content: $js
+  gap: $gap
+
+@mixin myTransition($type)
+  transition: $type 0.25s linear
+
+@function autoSize($min,$minPX,$max,$minScreen,$minScreenPX,$maxScreen)
+  @return calc($minPX + ($max - $min) * ((100vw - $minScreenPX) / ($maxScreen - $minScreen)))
