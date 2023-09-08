@@ -27,22 +27,22 @@ const Laser = () => {
           </div>
         </div>
         <div className={styles.imgWrapper}>
-          <img src="/img/articleLaser.png" alt="VR очки" />
+          <img src="./img/articleLaser.png" alt="VR очки" />
         </div>
       </div>
       <div className={styles.additions}>
         <div className={styles.additionWrapper}>
-          <img src="/icon/diamond.svg" alt="" />
+          <img src="./icon/diamond.svg" alt="" />
           <p>Офтальмологическое оборудование последнего поколения</p>
         </div>
         <Line height="200px" />
         <div className={styles.additionWrapper}>
-          <img src="/icon/medal.svg" alt="" />
+          <img src="./icon/medal.svg" alt="" />
           <p>Высококвалифицированные офтальмохирурги и операционная бригада</p>
         </div>
         <Line height="200px" />
         <div className={styles.additionWrapper}>
-          <img src="/icon/cubs.svg" alt="" />{" "}
+          <img src="./icon/cubs.svg" alt="" />{" "}
           <p>Одноразовые сертифицированные расходные материалы</p>
         </div>
       </div>

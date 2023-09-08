@@ -20,7 +20,7 @@ const LaserWhat = () => {
         </p>
       </div>
       <div className={styles.imgWrapper}>
-        <img src="/img/articleWhatLaser.png" alt="Беседа" />
+        <img src="./img/articleWhatLaser.png" alt="Беседа" />
       </div>
     </div>
   );

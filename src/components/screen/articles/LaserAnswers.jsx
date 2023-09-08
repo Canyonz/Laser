@@ -117,7 +117,7 @@ const LaserAnswers = () => {
           />
         </div>
         <div className={styles.imgWrapper}>
-          <img src="/img/articleAnswers.svg" alt="Кривые круги" />
+          <img src="./img/articleAnswers.svg" alt="Кривые круги" />
         </div>
       </div>
     </>

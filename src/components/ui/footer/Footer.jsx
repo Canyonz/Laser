@@ -21,7 +21,7 @@ const Footer = () => {
             этаж.
           </p>
         </div>
-        <img src="/img/mapFooter.jpg" alt="Карта" />
+        <img src="./img/mapFooter.jpg" alt="Карта" />
       </div>
       <div className={styles.footerSocials}>
         <h1>Мы в соцсетях :</h1>

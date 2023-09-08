@@ -35,7 +35,7 @@ const LaserIndications = () => {
         </div>
       </div>
       <div className={styles.imgWrapper}>
-        <img src="/img/articleIndicationsLaser.svg" alt="Кривые круги" />
+        <img src="./img/articleIndicationsLaser.svg" alt="Кривые круги" />
       </div>
     </div>
   );

@@ -68,7 +68,7 @@ const LaserSteps = () => {
           </p>
         </div>
         <div className={styles.imgWrapper}>
-          <img src="/img/articleSteps.png" alt="Диагностика зрения" />
+          <img src="./img/articleSteps.png" alt="Диагностика зрения" />
         </div>
       </div>
       <div
@@ -92,7 +92,7 @@ const LaserSteps = () => {
           </p>
         </div>
         <div className={styles.imgWrapper}>
-          <img src="/img/articleSteps.png" alt="Диагностика зрения" />
+          <img src="./img/articleSteps.png" alt="Диагностика зрения" />
         </div>
       </div>
       <div
@@ -115,7 +115,7 @@ const LaserSteps = () => {
           </p>
         </div>
         <div className={styles.imgWrapper}>
-          <img src="/img/articleSteps.png" alt="Диагностика зрения" />
+          <img src="./img/articleSteps.png" alt="Диагностика зрения" />
         </div>
       </div>
     </>
