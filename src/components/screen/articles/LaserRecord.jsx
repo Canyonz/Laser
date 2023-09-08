@@ -43,7 +43,7 @@ const LaserRecord = () => {
               required="Введите имя"
             />
             <img
-              src="/icon/people.svg"
+              src="./icon/people.svg"
               alt="Иконка человека"
               required="Введите телефон"
             />
@@ -55,7 +55,7 @@ const LaserRecord = () => {
               value={formattedPhoneNumber}
               onChange={formatAsPhoneNumber}
             />
-            <img src="/icon/phone.svg" alt="Иконка телефона" />
+            <img src="./icon/phone.svg" alt="Иконка телефона" />
           </div>
           <div className={styles.recordFormAgreement}>
             <div

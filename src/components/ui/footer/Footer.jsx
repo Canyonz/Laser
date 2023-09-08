@@ -156,7 +156,7 @@ const Footer = () => {
       </div>
       <img
         className={styles.eyeIcon}
-        src="/icon/iconEyes.svg"
+        src="./icon/iconEyes.svg"
         alt="Иконка глаза"
       />
 

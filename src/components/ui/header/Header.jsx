@@ -18,7 +18,7 @@ const Header = () => {
           <div className={styles.header_btn}>
             <Button link="record" text="Позвоните мне" />
           </div>
-          <img src="/icon/iconEyes.svg" alt="" />
+          <img src="./icon/iconEyes.svg" alt="" />
         </div>
       </div>
       <Nav />
