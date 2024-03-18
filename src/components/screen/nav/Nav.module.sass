@@ -2,8 +2,10 @@
 @import "./../../../assets/styles/mixin"
 
 .sectionWrapper
+  position: relative
   @include flexLayout(space-between,0)
   flex-direction: column
+  background-image: url("/img/eyes/eye0.jpg"), url("/img/eyes/eye1.jpg"), url("/img/eyes/eye2.jpg"), url("/img/eyes/eye3.jpg")
   background-position: center center
   background-size: cover
   animation: eye 5s 1s linear both
