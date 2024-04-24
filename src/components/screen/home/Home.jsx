@@ -16,6 +16,7 @@ import Footer from "../../ui/footer/Footer";
 const Home = () => {
   return (
     <div>
+      Test
       <Header />
 
       <main>
