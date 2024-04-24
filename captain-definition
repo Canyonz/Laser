@@ -1,14 +1,17 @@
 {
 	"schemaVersion": 2,
 	"dockerfileLines": [
-		"FROM node:20.11.0",
+		"FROM node:20.11.0 as builder",
 		"RUN mkdir -p /usr/src/app",
 		"WORKDIR /usr/src/app",
 		"COPY ./package.json ./yarn.lock /usr/src/app/",
 		"RUN yarn install && yarn cache clean --force",
 		"COPY ./ /usr/src/app",
 		"RUN yarn build",
+
+    "FROM nginx:alpine",
+		"COPY --from=builder /usr/src/app/dist /usr/share/nginx/html",
 		"EXPOSE 80",
-		"CMD [ \"yarn\", \"preview\" ]"
+		"CMD [ \"nginx\", \"-g\", \"daemon off;\" ]"
 	]
 }
