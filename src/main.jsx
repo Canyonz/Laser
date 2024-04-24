@@ -44,4 +44,19 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   ]
   
 }
+
+{
+  "schemaVersion": 2,
+  "dockerfileLines":  [
+    "FROM node:20.11.0",
+    "RUN mkdir -p /usr/src/app",
+    "WORKDIR /usr/src/app",
+    "COPY ./package.json ./yarn.lock /usr/src/app/",
+    "RUN yarn install && yarn cache clean --force",
+    "COPY ./ /usr/src/app",
+    "RUN yarn build",
+    "EXPOSE 80",
+    "CMD [ \"yarn\", \"preview\" ]"
+]
+}
 */
